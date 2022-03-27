@@ -83,7 +83,7 @@ resource "aws_nat_gateway" "terra-ngw" {
 
 }
 resource "aws_route_table" "terra-rt" {
-  vpc_id = aws_vpc.terrra-vpc.id
+  vpc_id = aws_vpc.terra-vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -99,7 +99,7 @@ resource "aws_route_table_association" "a2" {
   route_table_id = aws_route_table.terra-rt.id
 }
 resource "aws_route_table" "terra-rt1" {
-  vpc_id = aws_vpc.terrra-vpc.id
+  vpc_id = aws_vpc.terra-vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
