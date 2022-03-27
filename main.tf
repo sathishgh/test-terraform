@@ -37,7 +37,7 @@ resource "aws_instance" "fromjenkins" {
     ami="ami-0c02fb55956c7d316"
     key_name="terraform"
     instance_type="t2.micro" 
-    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+    vpc_security_group_ids = ["${aws_security_group.allow_all_T.id}"]
 }
 resource "aws_vpc" "terra-vpc" {
   cidr_block       = "192.168.0.0/16"
