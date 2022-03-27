@@ -10,8 +10,8 @@ provider "aws" {
 #    secret_key = "${var.skey}"
     region="us-east-1"  
 }
-resource "aws_security_group" "allow_all" {
-  name        = "allow_all"
+resource "aws_security_group" "allow_all_T" {
+  name        = "allow_all_T"
   description = "Allow all inbound traffic"
 
   ingress {
@@ -29,7 +29,7 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow_all"
+    Name = "allow_all_T"
   }
 }
 
